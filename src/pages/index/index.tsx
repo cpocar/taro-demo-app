@@ -5,7 +5,7 @@ import React, { Component } from 'react'
  */
 import { withAny} from 'taro-demo-pkg'
 /**
- * 使用本项目中的withAny， Button可以正常渲染
+ * 使用本项目中的withAny（与taro-demo-pkg中一致）， Button可以正常渲染
  */
 // import withAny from './withAny'
 import './index.scss'
