@@ -49,6 +49,12 @@ const config = {
     }
   },
   h5: {
+    devServer: {
+        port: 10087
+    },
+    router: {
+      mode: 'browser' // 或者是 'browser'
+    },
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {

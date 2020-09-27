@@ -7,11 +7,11 @@ import './index.scss'
 const Index = () => {
 
   Taro.usePageScroll((e) => {
-      console.log('usePageScroll', e)
+      console.log('usePageScroll-c', e)
   })
 
   Taro.useReachBottom(() => {
-    console.log('============>useReachBottom')
+    console.log('============>useReachBottom-c')
   })
 
 
