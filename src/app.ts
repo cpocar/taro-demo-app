@@ -1,5 +1,13 @@
 import { Component } from 'react'
+
+import { Text, Button } from '@tarojs/components'
+
+
 import './app.scss'
+
+console.log(Text, Button)
+
+
 
 class App extends Component {
 
@@ -9,7 +17,9 @@ class App extends Component {
 
   componentDidHide () {}
 
-  componentDidCatchError () {}
+  componentDidCatchError(err) {
+    console.log('componentDidCatchError', err)
+  }
 
   // this.props.children 是将要会渲染的页面
   render () {
@@ -18,4 +28,3 @@ class App extends Component {
 }
 
 export default App
- 

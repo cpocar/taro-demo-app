@@ -1,33 +1,38 @@
-import { Button, View } from '@tarojs/components'
-import React, { Component } from 'react'
-/**
- * 使用代码包中的withAny会导致Button渲染不出来
- */
-import { withAny} from 'taro-demo-pkg'
-/**
- * 使用本项目中的withAny（与taro-demo-pkg中一致）， Button可以正常渲染
- */
-// import withAny from './withAny'
+import { View } from '@tarojs/components'
+import Taro from '@tarojs/taro'
+import React from 'react'
+
 import './index.scss'
 
-class Index extends Component {
+const Index = () => {
+
+  Taro.usePageScroll((e) => {
+      console.log('usePageScroll', e)
+  })
+
+  Taro.useReachBottom(() => {
+    console.log('============>useReachBottom')
+  })
 
 
-  componentDidMount () { }
+  return (
+    <View className='container'>
 
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  render () {
-    return (
-      <View className='index'>
-        <Button>HelloWorld</Button>
+      <View className='list'>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
+        <View style={{ marginTop: '70px' }}>1</View>
       </View>
-    )
-  }
+      <View className='header'>header</View>
+    </View>
+  )
 }
-console.log("withAny", withAny)
-export default withAny(Index)
+export default Index
